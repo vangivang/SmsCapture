@@ -7,12 +7,14 @@ import android.telephony.SmsManager;
 import android.util.Log;
 import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class BackgroundServiceLauncherActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        startService(new Intent(this, SmsListenerService.class));
+        if (savedInstanceState == null){
+            startService(new Intent(this, SmsListenerService.class));
+        }
         finish();
     }
 

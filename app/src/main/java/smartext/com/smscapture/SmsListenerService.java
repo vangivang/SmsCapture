@@ -113,7 +113,7 @@ public class SmsListenerService extends Service {
 
     private void addAsForeground() {
 
-        Intent resultIntent = new Intent(this, MainActivity.class);
+        Intent resultIntent = new Intent(this, BackgroundServiceLauncherActivity.class);
         PendingIntent resultPendingIntent =
                 PendingIntent.getActivity(
                         this,
