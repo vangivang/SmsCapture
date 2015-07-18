@@ -12,10 +12,7 @@ public class BackgroundServiceLauncherActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (savedInstanceState == null){
-            startService(new Intent(this, SmsListenerService.class));
-        }
-        finish();
+        startService(new Intent(this, SmsListenerService.class));
     }
 
     private void sendSms() {
